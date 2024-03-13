@@ -16,8 +16,8 @@ else if (window.innerWidth >= 481 && window.innerWidth < 767) {
 }
 else if (window.innerWidth >= 768 && window.innerWidth < 992) {
     $("#first-card").turn({
-        width: 220,
-        height: 300,
+        width: 200,
+        height: 280,
         autoCenter: true,
         display: "single"
     });
