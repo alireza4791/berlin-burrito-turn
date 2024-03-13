@@ -26,26 +26,26 @@ if (window.innerWidth >= 0 && window.innerWidth < 480) {
 }
 else if (window.innerWidth >= 481 && window.innerWidth < 767) {
     $("#first-card").turn({
-        width: 150,
-        height: 210,
+        width: 100,
+        height: 150,
         autoCenter: true,
         display: "single"
     });
     $("#second-card").turn({
-        width: 150,
-        height: 210,
+        width: 100,
+        height: 150,
         autoCenter: true,
         display: "single"
     });
     $("#third-card").turn({
-        width: 150,
-        height: 210,
+        width: 100,
+        height: 150,
         autoCenter: true,
         display: "single"
     });
     $("#fourth-card").turn({
-        width: 150,
-        height: 210,
+        width: 100,
+        height: 150,
         autoCenter: true,
         display: "single"
     });
