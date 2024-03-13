@@ -58,20 +58,20 @@ else if (window.innerWidth >= 768 && window.innerWidth < 992) {
         display: "single"
     });
     $("#second-card").turn({
-        width: 220,
-        height: 300,
+        width: 200,
+        height: 280,
         autoCenter: true,
         display: "single"
     });
     $("#third-card").turn({
-        width: 220,
-        height: 300,
+        width: 200,
+        height: 280,
         autoCenter: true,
         display: "single"
     });
     $("#fourth-card").turn({
-        width: 220,
-        height: 300,
+        width: 200,
+        height: 280,
         autoCenter: true,
         display: "single"
     });
