@@ -1,36 +1,36 @@
 if (window.innerWidth >= 0 && window.innerWidth < 480) {
-    $("#first-card").turn({
-        width: 100,
-        height: 165,
-        autoCenter: true,
-        display: "single"
-    });
-    $("#second-card").turn({
-        width: 100,
-        height: 165,
-        autoCenter: true,
-        display: "single"
-    });
-    $("#third-card").turn({
-        width: 100,
-        height: 165,
-        autoCenter: true,
-        display: "single"
-    });
-    // $("#fourth-card").turn({
+    // $("#first-card").turn({
     //     width: 100,
     //     height: 165,
     //     autoCenter: true,
     //     display: "single"
     // });
-}
-else if (window.innerWidth >= 481 && window.innerWidth < 767) {
-    $("#first-card").turn({
+    $("#second-card").turn({
         width: 100,
-        height: 150,
+        height: 165,
         autoCenter: true,
         display: "single"
     });
+    $("#third-card").turn({
+        width: 100,
+        height: 165,
+        autoCenter: true,
+        display: "single"
+    });
+    $("#fourth-card").turn({
+        width: 100,
+        height: 165,
+        autoCenter: true,
+        display: "single"
+    });
+}
+else if (window.innerWidth >= 481 && window.innerWidth < 767) {
+    // $("#first-card").turn({
+    //     width: 100,
+    //     height: 150,
+    //     autoCenter: true,
+    //     display: "single"
+    // });
     $("#second-card").turn({
         width: 100,
         height: 150,
@@ -43,12 +43,12 @@ else if (window.innerWidth >= 481 && window.innerWidth < 767) {
         autoCenter: true,
         display: "single"
     });
-    // $("#fourth-card").turn({
-    //     width: 100,
-    //     height: 150,
-    //     autoCenter: true,
-    //     display: "single"
-    // });
+    $("#fourth-card").turn({
+        width: 100,
+        height: 150,
+        autoCenter: true,
+        display: "single"
+    });
 }
 else if (window.innerWidth >= 768 && window.innerWidth < 992) {
     $("#first-card").turn({
@@ -177,16 +177,17 @@ else if (window.innerWidth >= 1920) {
         display: "single"
     });
 }
-
-$("#first-card").bind("turning", function (event, page, view) {
-    event.preventDefault();
-});
-
-$("#first-card").bind("start", function (event, pageObject, corner) {
-    if (corner == "br") {
+if (window.innerWidth >= 768) {
+    $("#first-card").bind("turning", function (event, page, view) {
         event.preventDefault();
-    }
-});
+    });
+
+    $("#first-card").bind("start", function (event, pageObject, corner) {
+        if (corner == "br") {
+            event.preventDefault();
+        }
+    });
+}
 
 
 $("#second-card").bind("turning", function (event, page, view) {
@@ -206,12 +207,10 @@ $("#third-card").bind("start", function (event, pageObject, corner) {
         event.preventDefault();
     }
 });
-if (window.innerWidth >= 768) {
-    $("#fourth-card").bind("turning", function (event, page, view) {
-        event.preventDefault();
-    });
-    $("#fourth-card").bind("start", function (event, pageObject, corner) {
-        if (corner == "br") event.preventDefault();
-    });
-}
 
+$("#fourth-card").bind("turning", function (event, page, view) {
+    event.preventDefault();
+});
+$("#fourth-card").bind("start", function (event, pageObject, corner) {
+    if (corner == "br") event.preventDefault();
+});
